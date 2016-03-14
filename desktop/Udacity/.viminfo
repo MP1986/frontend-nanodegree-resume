@@ -21,21 +21,24 @@
 # Registers:
 
 # File marks:
-'0  1  45  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
-'1  3  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+'0  2  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+'1  1  45  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+'2  4  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
 
 # Jumplist (newest first):
--'  1  45  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
--'  3  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
 -'  2  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+-'  1  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+-'  4  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
+-'  3  0  /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
 
 # History of marks within files (newest to oldest):
 
 > /c/Users/Fangus/Desktop/Udacity/frontend-nanodegree-resume-master/.git/COMMIT_EDITMSG
-	"	1	45
-	^	1	46
-	.	2	0
+	"	2	0
+	^	2	0
+	.	1	16
 	+	1	0
 	+	1	12
-	+	2	0
-	+	2	0
+	+	3	0
+	+	3	0
+	+	1	16
