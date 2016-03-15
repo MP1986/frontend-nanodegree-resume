@@ -13,8 +13,8 @@ var bio = {
     "skills": [
         "AWESOMENESS", "devouring mortals", "manipulation and deceit", "heralding the strange aeons"
     ],
-    "bioPic": "http://vignette2.wikia.nocookie.net/lovecraft/images/e/e4/Nyarlathotep_by_erkanerturk-d4h5bgg.jpg/revision/latest/top-crop/width/320/height/320?cb=20151003113912",
-    "appendName": function() {
+    "biopic": "http://vignette2.wikia.nocookie.net/lovecraft/images/e/e4/Nyarlathotep_by_erkanerturk-d4h5bgg.jpg/revision/latest/top-crop/width/320/height/320?cb=20151003113912",
+    "display": function() {
         var formattedName = HTMLheaderName.replace("%data%", this.name);
 
         $("#header").append(formattedName);
@@ -26,7 +26,7 @@ var bio = {
     }
 };
 
-bio.appendName();
+bio.display();
 bio.appendRole();
 
 $("#header").append("<ul id=\"topContacts\" class=\"flex-box\"></ul>");
@@ -43,7 +43,7 @@ for (var key in bio.contacts) {
 }
 
 
-var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 $("#header").append(formattedPic);
 
 var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
@@ -148,14 +148,14 @@ var education = {
     "schools": [{
         "name": "UC Davis",
         "degree": "Bachelor of Fine Arts",
-        "year": "2008",
-        "major": "English",
+        "dates": "2008",
+        "majors": "English",
         "location": "Davis, CA"
     }, {
         "name": "DVC",
         "degree": "AA",
-        "year": "2004",
-        "major": "Undeclared",
+        "dates": "2004",
+        "majors": "Undeclared",
         "location": "Pleasant Hill, CA"
     }]
 };
