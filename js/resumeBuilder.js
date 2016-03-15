@@ -105,17 +105,6 @@ var projects = {
         "dates": "2016",
         "description": "Text!  Pictures!  On a screen!  A COMPUTER screen.",
         "images": "/C:/Users/Fangus/desktop/Udacity/frontend-nanodegree-resume-master/images/framework-preview2.png"
-/*
-    "contacts": {
-        "mobile": "867-5309",
-        "email": "NyarCat@aol.com",
-        "twitter": "@Nyarlathotep",
-        "github": "NyarCatSeesYou",
-        "location": "Fresno, CA",
-        "blog": "Hlaghlaghlag",
-    },
-
-*/
 }],
 
 
@@ -136,7 +125,7 @@ var projects = {
             var formattedProjectDescription = HTMLprojectDescription.replace("%data%", project.description);
             $(".project-entry:last").append(formattedProjectDescription);
 
-            var formattedProjectImage = HTMLprojectImage.replace("%data%", project.image);
+            var formattedProjectImage = HTMLprojectImage.replace("%data%", project.images);
             $(".project-entry:last").append(formattedProjectImage);
         }
     }
@@ -164,6 +153,8 @@ var education = {
 
     for (var index in education.schools) {
         if (education.schools.hasOwnProperty(index)) {
+//$(".education-entry:last").append(/*your items*/);
+
             var school = education.schools[index];
 
             var formattedSchool = HTMLschoolName.replace("%data%", school.name);
@@ -175,7 +166,7 @@ var education = {
             var formattedYear = HTMLschoolDates.replace("%data%", school.year);
             $("#education").append(formattedYear);
 
-            var formattedMajor = HTMLschoolMajor.replace("%data%", school.major);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
             $("#education").append(formattedMajor);
 
             var formattedCity = HTMLschoolLocation.replace("%data%", school.location);
