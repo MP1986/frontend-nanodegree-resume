@@ -18,46 +18,43 @@ var bio = {
         var formattedName = HTMLheaderName.replace("%data%", this.name);
 
         $("#header").append(formattedName);
-    },
-    "appendRole": function() {
+
         var formattedRole = HTMLheaderRole.replace("%data%", this.role);
 
         $("#header").append(formattedRole);
+        $("#header").append("<ul id=\"topContacts\" class=\"flex-box\"></ul>");
+
+        for (var key in bio.contacts) {
+            if (bio.contacts.hasOwnProperty(key)) {
+                var value = bio.contacts[key];
+                var formattedContact = HTMLcontactGeneric.replace("%contact%", key).replace("%data%", value);
+                $("#topContacts").append(formattedContact);
+                $("#footerContacts").append(formattedContact);
+            }
+        }
+        var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
+        $("#header").append(formattedPic);
+
+        var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+        $("#header").append(formattedWelcomeMessage);
+
+        $("#header").append(HTMLskillsStart);
+        for (key in bio.skills) {
+            if (bio.skills.hasOwnProperty(key)) {
+
+                var skill = bio.skills[key];
+                var formattedSkill = HTMLskills.replace("%data%", skill);
+                $("#skills").append(formattedSkill);
+            }
+        }
+
     }
 };
 
 bio.display();
-bio.appendRole();
-
-$("#header").append("<ul id=\"topContacts\" class=\"flex-box\"></ul>");
-
-//for (key in book) {
-//    if(book.hasOwnProperty(key)) 
-for (var key in bio.contacts) {
-    if (bio.contacts.hasOwnProperty(key)) {
-        var value = bio.contacts[key];
-        var formattedContact = HTMLcontactGeneric.replace("%contact%", key).replace("%data%", value);
-        $("#topContacts").append(formattedContact);
-        $("#footerContacts").append(formattedContact);
-    }
-}
 
 
-var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
-$("#header").append(formattedPic);
 
-var formattedWelcomeMessage = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-$("#header").append(formattedWelcomeMessage);
-
-$("#header").append(HTMLskillsStart);
-for (var key in bio.skills) {
-    if (bio.skills.hasOwnProperty(key)) {
-
-        var skill = bio.skills[key];
-        var formattedSkill = HTMLskills.replace("%data%", skill);
-        $("#skills").append(formattedSkill);
-    }
-}
 
 var work = {
     "jobs": [{
@@ -72,14 +69,9 @@ var work = {
         "dates": "2000-2016",
         "description": "Making sandwiches, keeping area tidy and clean, exemplary customer service.",
         "location": "Fresno, CA"
-    }]
+    }],
+    "display": function() {
 
-};
-
-function displayWork() {
-
-    //for (key in book) {
-    //    if(book.hasOwnProperty(key)) 
     for (var job in work.jobs) {
         if (work.jobs.hasOwnProperty(job)) {
             $("#workExperience").append(HTMLworkStart);
@@ -103,26 +95,35 @@ function displayWork() {
         }
     }
 }
+};
 
-displayWork();
+work.display();
 
-var projects = [{
-    "title": "Sample Project 1",
-    "dates": "2016",
-    "description": "Text!  Pictures!  On a screen!  A COMPUTER screen.",
-    "image": "/C:/Users/Fangus/desktop/Udacity/frontend-nanodegree-resume-master/images/framework-preview2.png"
+var projects = {
+    "list": [{
+        "title": "Sample Project 1",
+        "dates": "2016",
+        "description": "Text!  Pictures!  On a screen!  A COMPUTER screen.",
+        "images": "/C:/Users/Fangus/desktop/Udacity/frontend-nanodegree-resume-master/images/framework-preview2.png"
+/*
+    "contacts": {
+        "mobile": "867-5309",
+        "email": "NyarCat@aol.com",
+        "twitter": "@Nyarlathotep",
+        "github": "NyarCatSeesYou",
+        "location": "Fresno, CA",
+        "blog": "Hlaghlaghlag",
+    },
 
-}];
+*/
+}],
 
 
-function displayProjects() {
+    "display": function() {
 
-    //for (key in book) {
-    //    if(book.hasOwnProperty(key)) 
-
-    for (var index in projects) {
-        if (projects.hasOwnProperty(index)) {
-            var project = projects[index];
+    for (var index in projects.list) {
+        if (projects.list.hasOwnProperty(index)) {
+            var project = projects.list[index];
 
             $("#projects").append(HTMLprojectStart);
 
@@ -140,8 +141,9 @@ function displayProjects() {
         }
     }
 }
+};
 
-displayProjects();
+projects.display();
 
 
 var education = {
@@ -157,13 +159,8 @@ var education = {
         "dates": "2004",
         "majors": "Undeclared",
         "location": "Pleasant Hill, CA"
-    }]
-};
-
-function displayEducation() {
-
-    //for (key in book) {
-    //    if(book.hasOwnProperty(key)) 
+    }],
+    "display": function() {
 
     for (var index in education.schools) {
         if (education.schools.hasOwnProperty(index)) {
@@ -186,8 +183,9 @@ function displayEducation() {
         }
     }
 }
+};
 
-displayEducation();
+education.display();
 
 $("#mapDiv").append(googleMap);
 
