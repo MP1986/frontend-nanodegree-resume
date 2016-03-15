@@ -150,13 +150,13 @@ var education = {
     "schools": [{
         "name": "UC Davis",
         "degree": "Bachelor of Fine Arts",
-        "dates": "2008",
+        "dates": "2006-2008",
         "majors": "English",
         "location": "Davis, CA"
     }, {
         "name": "DVC",
         "degree": "AA",
-        "dates": "2004",
+        "dates": "2004-2006",
         "majors": "Undeclared",
         "location": "Pleasant Hill, CA"
     }],
